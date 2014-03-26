@@ -55,8 +55,9 @@ p { margin:30px 0; }
 }
 
 // Service
-.service
-{
+.service {
+	.transition();
+	
 	.service-title {
 		font-family:@body-font;
 		font-size:48px;
@@ -66,6 +67,118 @@ p { margin:30px 0; }
 	.service-desc {
 		text-align:center;
 		font-size:24px;
+	}
+}
+
+.service-container:hover {
+	.service {
+		opacity:0.4;
+		
+		&:hover {
+			opacity:1;
+		}
+	}
+}
+
+// Contact Form
+.contact-form {
+	border:3px solid #dbae7d;
+	padding:10px 15px;
+	color:#505050;
+	font-family:"Helvetica Neue", sans-serif, Arial;
+	font-size:14px;
+	.rounded(30px);
+}
+textarea.contact-form {
+	width:100%;
+}
+
+// Portfolio
+.portfolio-container .mix{
+	display: none;
+}
+
+.portfolio-container:hover {
+	.portfolio {
+		opacity:0.4;
+		.rotation(0deg);
+		
+		&:hover {
+			opacity:1;
+		}
+	}
+}
+
+.portfolio {
+	display:inline-block;
+	background:#fff;
+	padding:20px;
+	margin:15px 0;
+	color:#777;
+	.box-shadow(3px 3px 6px rgba(0,0,0,0.3));
+	.transition();
+	.rotation(2deg);
+	
+	.preview {
+		.box-shadow(inset 0 0 5px rgba(0,0,0,1));
+		position:relative;
+		
+		img { 
+			max-width:100%;
+		}
+	}
+	
+	.portfolio-title {
+		text-align:center;
+		
+		h1,h2,h3,h4,h5,h6 {
+			margin:25px 0 0;
+			font-family:@body-font;
+			font-size:35px;
+			font-weight:bold;
+		}
+	}
+	
+	.portfolio-tags {
+		text-align:center;
+		
+		span {
+			display:inline-block;
+			color:@background-color;
+			font-size:24px;
+		}
+	}
+	
+	.portfolio-desc {
+		font-size:24px;
+		
+		p {
+			margin:15px 0;
+		}
+	}
+}
+
+.filter-container {
+	text-align:center;
+	
+	.filter {
+		display:inline-block;
+		background:darken(@background-color,15%);
+		padding:10px 20px 5px;
+		margin:0 5px;
+		font-size:24px;
+		border:3px solid transparent;
+		.rounded(50px);
+		
+		&.active {
+			background:darken(@background-color,20%);
+			border:3px #fff solid;
+		}
+		
+		&:hover {
+			border:3px #fff solid;
+			cursor:pointer;
+		}
 	}
 }
 
@@ -107,6 +220,14 @@ p { margin:30px 0; }
 			transform: scale(-1, 1);
 		}
 	}
+}
+
+// Selection
+::selection {
+	background: darken(@background-color,10%); /* Safari */
+}
+::-moz-selection {
+	background: darken(@background-color,10%); /* Firefox */
 }
 
 // MIXINS

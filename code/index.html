@@ -58,42 +58,139 @@
 				<div class="container">
 					<div class="col-xs-12">
 						<h2 class="main-title">My Services <small>Things that I could do for you</small></h2>
-						
-						<div class="row">
-							<div class="col-md-4">
-								<div class="service">
-									<img src="" alt="" />
-									<h3 class="service-title">
-										Photography
-									</h3>
-									<div class="service-desc">
-										<p>I love photography and it is my passion. Although I may not be the best in town, I have confidence in my skill in capturing moments.</p>
+						<div class="service-container">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="service">
+										<img src="" alt="" />
+										<h3 class="service-title">
+											Photography
+										</h3>
+										<div class="service-desc">
+											<p>I love photography and it is my passion. Although I may not be the best in town, I have confidence in my skill in capturing moments.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<img src="" alt="" />
-									<h3 class="service-title">
-										Web Development
-									</h3>
-									<div class="service-desc">
-										<p>Web design &amp; development has always been my other hobby. After I graduate as a Software Engineer, I believe that I can create more amazing website for you.</p>
+								<div class="col-md-4">
+									<div class="service">
+										<img src="" alt="" />
+										<h3 class="service-title">
+											Web Development
+										</h3>
+										<div class="service-desc">
+											<p>Web design &amp; development has always been my other hobby. After I graduate as a Software Engineer, I believe that I can create more amazing website for you.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<img src="" alt="" />
-									<h3 class="service-title">
-										Art &amp; Drawing
-									</h3>
-									<div class="service-desc">
-										<p>When I was ini high school, art subject is my forte. I have been in love with sketch, drawing, and all sketchy-related arts. Take a look at some of my pictures in my portfolio.</p>
+								<div class="col-md-4">
+									<div class="service">
+										<img src="" alt="" />
+										<h3 class="service-title">
+											Art &amp; Drawing
+										</h3>
+										<div class="service-desc">
+											<p>When I was ini high school, art subject is my forte. I have been in love with sketch, drawing, and all sketchy-related arts. Take a look at some of my pictures in my portfolio.</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="scissor left" />
+			<div class="section">
+				<div class="container">
+					<div class="col-xs-12">
+						<h2 class="main-title text-center">The Stuffs I've made <small>with love and passion of course!</small></h2>
+						
+						<div class="filter-container">
+							<div class="filter" data-filter="all">All</div>
+							<div class="filter" data-filter=".photography">Photography</div>
+							<div class="filter" data-filter=".drawing">Drawing</div>
+						</div>
+
+						<div class="row portfolio-container" id="portfolio">
+							<div class="col-sm-6 col-md-4 mix photography" data-myorder="2">
+								<div class="portfolio">
+									<div class="preview">
+										<img src="images/dummy-01.jpg" alt="" />
+									</div>
+									<div class="portfolio-title">
+										<h3>My First Photo</h3>
+									</div>
+									<div class="portfolio-tags">
+										<span>photography</span>
+									</div>
+									<div class="portfolio-desc">
+										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 mix drawing" data-myorder="4">
+								<div class="portfolio">
+									<div class="preview">
+										<img src="images/dummy-02.jpg" alt="" />
+									</div>
+									<div class="portfolio-title">
+										<h3>My First Photo</h3>
+									</div>
+									<div class="portfolio-tags">
+										<span>photography</span>
+									</div>
+									<div class="portfolio-desc">
+										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 mix photography" data-myorder="1">
+								<div class="portfolio">
+									<div class="preview">
+										<img src="images/dummy-03.jpg" alt="" />
+									</div>
+									<div class="portfolio-title">
+										<h3>My First Photo</h3>
+									</div>
+									<div class="portfolio-tags">
+										<span>photography</span>
+									</div>
+									<div class="portfolio-desc">
+										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 mix drawing" data-myorder="8">
+								<div class="portfolio">
+									<div class="preview">
+										<img src="images/dummy-01.jpg" alt="" />
+									</div>
+									<div class="portfolio-title">
+										<h3>My First Photo</h3>
+									</div>
+									<div class="portfolio-tags">
+										<span>photography</span>
+									</div>
+									<div class="portfolio-desc">
+										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="scissor right" />
+			<div class="section">
+				<div class="container">
+					<div class="col-xs-12">
+						<h2 class="main-title text-right">Write me something! <small>I'd love to hear from you</small></h2>
+					</div>
+					<div class="col-xs-12 col-md-8">
+						<p>Dear John,</p>
+						<p>I am writing this letter in regards to <input type="text" class="contact-form" name="subject" placeholder="Subject" /></p>
+						<p><textarea class="contact-form" name="message" placeholder="Your messages" rows="4"></textarea></p>
+						<p>Hope to hear from you soon! Please reply me at <input type="email" class="contact-form" name="email" placeholder="Your Email" /></p>
+						<p>Sincerely,<br /><input type="text" class="contact-form" name="name" placeholder="Your name" /></p>
 					</div>
 				</div>
 			</div>
@@ -102,6 +199,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/bootstrap.min.js"></script>
+        <script src="plugins/mixitup/jquery.mixitup.min.js"></script>
 
         <script>
 			/*
@@ -112,6 +210,8 @@
 			*/
 			
 			$(document).ready(function() {
+				// Instantiate MixItUp:
+				$('#portfolio').mixItUp();
 			});
         </script>
 		
