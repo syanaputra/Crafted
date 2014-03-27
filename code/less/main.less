@@ -32,6 +32,12 @@ h1,h2,h3,h4,h5,h6 {
 		font-size:0.85em;
 	}
 }
+h1 { font-size:60px; }
+h2 { font-size:50px; }
+h3 { font-size:42px; }
+h4 { font-size:35px; }
+h5 { font-size:30px; }
+h6 { font-size:25px; }
 
 strong { .header-shadow(); }
 p { margin:30px 0; }
@@ -58,6 +64,17 @@ p { margin:30px 0; }
 .service {
 	.transition();
 	
+	.service-art {
+		text-align:center;
+		margin:0 auto;
+		font-size:90px;
+		width:150px;
+		height:150px;
+		padding-top:30px;
+		.rounded(50%);
+		.transition();
+	}
+	
 	.service-title {
 		font-family:@body-font;
 		font-size:48px;
@@ -69,13 +86,20 @@ p { margin:30px 0; }
 		font-size:24px;
 	}
 }
-
-.service-container:hover {
-	.service {
-		opacity:0.4;
-		
-		&:hover {
-			opacity:1;
+.service-container {
+	padding-top:40px;
+	
+	&:hover {
+		.service {
+			opacity:0.4;
+			
+			&:hover {
+				opacity:1;
+				.service-art {
+					color:@background-color;
+					background:#fff;
+				}
+			}
 		}
 	}
 }
