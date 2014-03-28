@@ -28,24 +28,24 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#main-nav">
 		<div class="page-wrapper wide">
-			<div class="container">
-				<div class="col-xs-12">
-					<div class="hero-unit text-center">
-						<h1 class="hero-title">Hero Unit</h1>
-						<p class="hero-subtitle">This is the first thing that user will see</p>
-						
-						<!-- #TODO: Learn More -->
-						<div class="section-nav">
-							<a class="learnmore"><i class="fa fa-angle-down"></i></a>
-							<a class="learnmore"><i class="fa fa-angle-up"></i></a>
+			<div id="home" class="section">
+				<div class="container">
+					<div class="col-xs-12">
+						<div class="hero-unit text-center">
+							<h1 class="hero-title">Hero Unit</h1>
+							<p class="hero-subtitle">This is the first thing that user will see</p>
+							
+							<div class="section-nav">
+								<a href="#about" class="learnmore-stitch"><div class="stitch"><i class="fa fa-angle-down"></i></div></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<hr class="scissor left" />
-			<div class="section">
+			<div id="about" class="section">
 				<div class="container">
 					<div class="col-xs-12 col-sm-8">
 						<h2 class="main-title">This Template <small>Something that you should know about this template</small></h2>
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<hr class="scissor right" />
-			<div class="section">
+			<div id="services"class="section">
 				<div class="container">
 					<div class="col-xs-12">
 						<h2 class="main-title">My Services <small>Things that I could do for you</small></h2>
@@ -68,7 +68,9 @@
 								<div class="col-md-4">
 									<div class="service">
 										<div class="service-art">
-											<i class="fa fa-camera"></i>
+											<div class="service-art-stitch">
+												<i class="fa fa-camera"></i>
+											</div>
 										</div>
 										<h3 class="service-title">
 											Photography
@@ -81,7 +83,9 @@
 								<div class="col-md-4">
 									<div class="service">
 										<div class="service-art">
-											<i class="fa fa-html5"></i>
+											<div class="service-art-stitch">
+												<i class="fa fa-html5"></i>
+											</div>
 										</div>
 										<h3 class="service-title">
 											Web Development
@@ -94,7 +98,9 @@
 								<div class="col-md-4">
 									<div class="service">
 										<div class="service-art">
-											<i class="fa fa-pencil"></i>
+											<div class="service-art-stitch">
+												<i class="fa fa-pencil"></i>
+											</div>
 										</div>
 										<h3 class="service-title">
 											Art &amp; Drawing
@@ -110,7 +116,7 @@
 				</div>
 			</div>
 			<hr class="scissor left" />
-			<div class="section">
+			<div id="portfolio" class="section">
 				<div class="container">
 					<div class="col-xs-12">
 						<h2 class="main-title text-center">The Stuffs I've made <small>with love and passion of course!</small></h2>
@@ -125,7 +131,17 @@
 							<div class="col-sm-6 col-md-4 mix photography" data-myorder="2">
 								<div class="portfolio">
 									<div class="preview">
-										<img src="images/dummy-01.jpg" alt="" />
+										<div class="preview-hover">
+											<div class="preview-context">
+												<a class="learnmore" href="#">
+													<i class="fa fa-search"></i>
+												</a>
+												<a class="learnmore" href="#">
+													<i class="fa fa-link"></i>
+												</a>
+											</div>
+										</div>
+										<img src="images/dummy-01.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
 										<h3>My First Photo</h3>
@@ -141,7 +157,17 @@
 							<div class="col-sm-6 col-md-4 mix drawing" data-myorder="4">
 								<div class="portfolio">
 									<div class="preview">
-										<img src="images/dummy-02.jpg" alt="" />
+										<div class="preview-hover">
+											<div class="preview-context">
+												<a class="learnmore" href="#">
+													<i class="fa fa-search"></i>
+												</a>
+												<a class="learnmore" href="#">
+													<i class="fa fa-link"></i>
+												</a>
+											</div>
+										</div>
+										<img src="images/dummy-02.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
 										<h3>My First Photo</h3>
@@ -157,7 +183,17 @@
 							<div class="col-sm-6 col-md-4 mix photography" data-myorder="1">
 								<div class="portfolio">
 									<div class="preview">
-										<img src="images/dummy-03.jpg" alt="" />
+										<div class="preview-hover">
+											<div class="preview-context">
+												<a class="learnmore" href="#">
+													<i class="fa fa-search"></i>
+												</a>
+												<a class="learnmore" href="#">
+													<i class="fa fa-link"></i>
+												</a>
+											</div>
+										</div>
+										<img src="images/dummy-03.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
 										<h3>My First Photo</h3>
@@ -173,7 +209,17 @@
 							<div class="col-sm-6 col-md-4 mix drawing" data-myorder="8">
 								<div class="portfolio">
 									<div class="preview">
-										<img src="images/dummy-01.jpg" alt="" />
+										<div class="preview-hover">
+											<div class="preview-context">
+												<a class="learnmore" href="#">
+													<i class="fa fa-search"></i>
+												</a>
+												<a class="learnmore" href="#">
+													<i class="fa fa-link"></i>
+												</a>
+											</div>
+										</div>
+										<img src="images/dummy-01.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
 										<h3>My First Photo</h3>
@@ -191,7 +237,7 @@
 				</div>
 			</div>
 			<hr class="scissor right" />
-			<div class="section">
+			<div id="contact" class="section">
 				<div class="container">
 					<div class="col-xs-12">
 						<h2 class="main-title text-right">Write me something! <small>I'd love to hear from you</small></h2>
@@ -206,10 +252,29 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="fixed-nav closed">
+			<div class="nav-container">
+				<div id="main-nav" class="stitch">
+					<ul class="nav nav-crafted">
+						<li class="home-brand"><a href="#home"><i class="fa fa-home"></i> Crafted</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="nav-toggle">
+					<a id="nav-toggler" href="javascript:void(0)" onclick="toggle_nav()"><i class="fa fa-angle-double-down"></i></a>
+				</div>
+			</div>
+		</div>
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/bootstrap.min.js"></script>
+        <script src="plugins/jquery-scrollto.js"></script>
         <script src="plugins/mixitup/jquery.mixitup.min.js"></script>
 
         <script>

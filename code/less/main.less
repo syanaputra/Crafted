@@ -14,6 +14,77 @@ html, body {
 	background:@background-color;
 	color:@text-color;
 	letter-spacing:1px;
+	
+	padding-bottom:80px;
+}
+
+// Navigation
+.fixed-nav {
+	position:fixed;
+	margin:0 auto;
+	text-align:center;
+	width:100%;
+	.transition();
+	
+	&.opened { bottom:-8px; }
+	&.closed { bottom:-65px;}
+	
+	.nav-container {
+		display:inline-block;
+		background:#fff;
+		padding:7px;
+		.rounded(5px);
+		.box-shadow(1px 2px 6px rgba(0,0,0,0.4));
+		
+		.stitch {
+			width:100%;
+			height:100%;
+			border:1px dashed @background-color;
+			.rounded(3px);
+		}
+		
+		.nav-toggle {
+			position:absolute;
+			top:-25px;
+			background:#fff;
+			padding:5px;
+			width:30px;
+			height:30px;
+			z-index:10;
+			font-size:20px;
+			text-align:center;
+			
+			.border-radius(5px, 0, 0, 5px);
+		}
+	}
+}
+
+.nav-crafted {
+	display:inline-block;
+	color:@background-color;
+	font-size:20px;
+	
+	li {
+		display:inline-block;
+		
+		a {
+			color:@background-color;
+			&:hover {
+				color:darken(@background-color,15%);
+				background-color:transparent;
+			}
+		}
+		
+		&.active {
+			background:lighten(@background-color,30%);
+			color:darken(@background-color,15%);
+			.border-radius(5px, 0, 0, 5px);
+		}
+	}
+	
+	.home-brand {
+		font-weight:bold;
+	}
 }
 
 // Typography
@@ -41,6 +112,9 @@ h6 { font-size:25px; }
 
 strong { .header-shadow(); }
 p { margin:30px 0; }
+
+a { color:lighten(@background-color,10%); }
+a:hover { color:darken(@background-color,10%); }
 
 // Section
 .section {
@@ -83,6 +157,38 @@ p { margin:30px 0; }
 	}
 }
 
+.learnmore-stitch {
+	background:#fff;
+	color:@background-color;
+	display:inline-block;
+	width:65px;
+	height:65px;
+	border:4px solid transparent;
+	margin:0 auto;
+	text-align:center;
+	.rounded(50px);
+	.transition();
+	
+	.stitch {
+		width:100%;
+		height:100%;
+		padding:13px 0;
+		border:1px dashed @background-color;
+		.rounded(50px);
+	}
+	
+	&:hover {
+		background:darken(@background-color,20%);
+		color:#fff;
+		border:4px solid #fff;
+		cursor:pointer;
+		
+		.stitch {
+			border:1px dashed transparent;
+		}
+	}
+}
+
 // Service
 .service {
 	.transition();
@@ -91,11 +197,21 @@ p { margin:30px 0; }
 		text-align:center;
 		margin:0 auto;
 		font-size:90px;
-		width:150px;
-		height:150px;
-		padding-top:30px;
+		width:170px;
+		height:170px;
+		padding-top:40px;
 		.rounded(50%);
 		.transition();
+		
+		.service-art-stitch {
+			border:1px dashed @background-color;
+			width:160px;
+			height:160px;
+			margin:-35px auto 0;
+			padding-top:35px;
+			text-align:center;
+			.rounded(50%);
+		}
 	}
 	
 	.service-title {
@@ -170,8 +286,35 @@ textarea.contact-form {
 		.box-shadow(inset 0 0 5px rgba(0,0,0,1));
 		position:relative;
 		
+		.preview-hover {
+			opacity:0;
+			text-align:center;
+			background:rgba(0,0,0,0.75);
+			width:100%;
+			height:100%;
+			position:absolute;
+			.transition();
+			
+			.preview-context {
+				position:absolute;
+				top:50%;
+				width:100%;
+				margin:-30px 0 0;
+				text-align:center;
+			}
+		}
+		
 		img { 
-			max-width:100%;
+			display: block;
+			max-width: 100%;
+			width:100%;
+			height: auto;
+		}
+		
+		&:hover {
+			.preview-hover {
+				opacity:1;
+			}
 		}
 	}
 	
