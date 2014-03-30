@@ -7,6 +7,11 @@ $("a").click(function() {
 	return false;
 });
 
+function resize_section()
+{
+	$('.auto-resize').css('min-height', $( window ).height());
+}
+
 function toggle_nav() {
 	var nav = $(".fixed-nav");
 	var nav_toggler = $("#nav-toggler");
@@ -26,5 +31,12 @@ function toggle_nav() {
 }
 
 $(function() {
+	resize_section();
 	toggle_nav();
+	
+		
+
+	$(window).resize(function() {
+		resize_section();
+	});
 });

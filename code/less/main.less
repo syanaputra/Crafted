@@ -119,9 +119,35 @@ a:hover { color:darken(@background-color,10%); }
 	padding:90px 0;
 }
 
+@media (max-width: 767px) {
+	.section {
+		padding:35px 0;
+	}
+}
+@media (min-width: 768px) {
+	.section {
+		padding:50px 0;
+	}
+}
+@media (min-width: 992px) {
+	.section {
+		padding:65px 0;
+	}
+}
+@media (min-width: 1200px) {
+	.section {
+		padding:80px 0;
+	}
+}
+
+
 // Hero Unit
 .hero-unit {
-	padding:200px 0; 
+	position:absolute;
+	top:50%;
+	width:100%;
+	padding:50px 0;
+	margin-top:-190px;
 	
 	.hero-title {
 		font-size:85px;
