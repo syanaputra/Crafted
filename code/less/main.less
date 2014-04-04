@@ -7,6 +7,9 @@
 // Import Colours
 @import "var-default.less";
 
+// Import Colours
+@import "buttons.less";
+
 // Let's Start
 html, body {
 	font-family:@body-font;
@@ -16,6 +19,31 @@ html, body {
 	letter-spacing:1px;
 }
 
+// Overlay
+.overlay-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background: rgba(199, 165, 126, 0.9);
+	.transition();
+	z-index: 0;
+}
+
+.main-color {
+	background: rgba(199, 165, 126, 0.5);
+}
+
+.black {
+	background: rgba(0,0,0,0.5);
+}
+
+.overlay-text {
+	z-index:10;
+}
+
 // Navigation
 .fixed-nav {
 	position:fixed;
@@ -23,9 +51,7 @@ html, body {
 	text-align:center;
 	width:100%;
 	.transition();
-	
-	&.opened { bottom:-8px; }
-	&.closed { bottom:-65px;}
+	bottom:-8px;
 	
 	.nav-container {
 		display:inline-block;
@@ -39,6 +65,16 @@ html, body {
 			height:100%;
 			border:1px dashed @background-color;
 			.rounded(3px);
+		}
+		
+		.nav-menu {
+			&.opened {
+				visibility:visible;
+			}
+			
+			&.opened {
+				visibility:hidden;
+			}
 		}
 		
 		.nav-toggle {
@@ -111,8 +147,16 @@ h6 { font-size:25px; }
 strong { .header-shadow(); }
 p { margin:30px 0; }
 
-a { color:lighten(@background-color,10%); }
-a:hover { color:darken(@background-color,10%); }
+a { color:darken(@background-color,20%); .transition(); }
+a:hover { color:lighten(@background-color,20%);  }
+
+// Layout
+.paper {
+	background:#fff;
+	color:#555;
+	padding:25px;
+	margin:30px 0 15px;
+}
 
 // Section
 .section {
@@ -156,6 +200,10 @@ a:hover { color:darken(@background-color,10%); }
 	.hero-subtitle {
 		font-size:30px;
 	}
+}
+
+.hero-bg {
+	background: url("../images/illust-header.jpg") no-repeat top @background-color;
 }
 
 // Section Nav & Learn More
@@ -218,6 +266,7 @@ a:hover { color:darken(@background-color,10%); }
 	.transition();
 	
 	.service-art {
+		background:darken(@background-color,10%);
 		text-align:center;
 		margin:0 auto;
 		font-size:90px;
@@ -258,6 +307,7 @@ a:hover { color:darken(@background-color,10%); }
 			
 			&:hover {
 				opacity:1;
+				
 				.service-art {
 					color:@background-color;
 					background:#fff;
@@ -278,6 +328,35 @@ a:hover { color:darken(@background-color,10%); }
 }
 textarea.contact-form {
 	width:100%;
+}
+
+.illust-contact {
+	position: relative;
+	max-width: 100%;
+	float: left;
+	overflow:hidden;
+	height:475px;
+	
+	&.shadow {
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			box-shadow: inset 0 0 8px rgba(0,0,0,.6);
+			-moz-box-shadow: inset 0 0 8px rgba(0,0,0,.6);
+			-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,.6);
+		} 
+	}
+}
+
+// Form Control
+.form-control {
+	font-size:28px;
+	height:40px;
+	padding:6px 12px 0;
 }
 
 // Portfolio
@@ -407,7 +486,7 @@ textarea.contact-form {
 // Horizontal Line - Scissors
 .scissor {
 	border-top:dashed 4px rgba(255,255,255,0.35);
-	margin:20px 25px;
+	margin:38px 25px 20px;
 	clear:both;
 
 	
