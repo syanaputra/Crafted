@@ -366,7 +366,7 @@ textarea.contact-form {
 
 .portfolio-container:hover {
 	.portfolio {
-		opacity:0.4;
+		opacity:0.7;
 		.rotation(0deg);
 		
 		&:hover {
@@ -383,7 +383,6 @@ textarea.contact-form {
 	color:#777;
 	.box-shadow(3px 3px 6px rgba(0,0,0,0.3));
 	.transition();
-	.rotation(2deg);
 	
 	.preview {
 		.box-shadow(inset 0 0 5px rgba(0,0,0,1));
@@ -475,6 +474,21 @@ textarea.contact-form {
 	}
 }
 
+@media (max-width: 767px) {
+	.portfolio {
+		.rotation(0deg);
+	}
+}
+@media (max-width: 767px) {
+	.portfolio {
+		.rotation(0deg);
+	}
+}
+@media (min-width: 768px) {
+	.portfolio {
+		.rotation(1.5deg);
+	}
+}
 
 // Bottom
 .bottom {
@@ -529,6 +543,14 @@ textarea.contact-form {
 }
 ::-moz-selection {
 	background: darken(@background-color,10%); /* Firefox */
+}
+
+// Modal
+.modal {
+	color:#444;
+}
+.modal-title {
+	color:#333;
 }
 
 // MIXINS

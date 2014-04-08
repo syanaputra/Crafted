@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="css/crafted.css" type='text/css' data-s="main">
         <link rel="stylesheet" href="css/animate.css" type='text/css' data-s="main">
+		<link rel="stylesheet" href="plugins/lightbox/css/lightbox.css" />
 
 		<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -133,10 +134,10 @@
 									<div class="preview">
 										<div class="preview-hover hidden-xs">
 											<div class="preview-context">
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="images/dummy-01.jpg" data-title="My First Photo" data-lightbox="photography">
 													<i class="fa fa-search"></i>
 												</a>
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
 													<i class="fa fa-link"></i>
 												</a>
 											</div>
@@ -156,14 +157,14 @@
 									<div class="visible-xs">
 										<div class="row">
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="images/dummy-01.jpg" data-title="My First Photo" data-lightbox="photography-mobile">
 													<div class="stitch">
 														<i class="fa fa-search"></i>
 													</div>
 												</a>
 											</div>
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
 													<div class="stitch">
 														<i class="fa fa-link"></i>
 													</div>
@@ -178,37 +179,37 @@
 									<div class="preview">
 										<div class="preview-hover hidden-xs">
 											<div class="preview-context">
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="images/drawing-01.jpg" data-title="Elsa of Arendelle" data-lightbox="drawing">
 													<i class="fa fa-search"></i>
 												</a>
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="http://hepapatitis.deviantart.com/art/Elsa-of-Arendelle-from-Disney-Frozen-428586046" target="_blank">
 													<i class="fa fa-link"></i>
 												</a>
 											</div>
 										</div>
-										<img src="images/dummy-02.jpg" class="img-responsive" alt="" />
+										<img src="images/drawing-01.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
-										<h3>My First Photo</h3>
+										<h3>Elsa of Arendelle</h3>
 									</div>
 									<div class="portfolio-tags">
-										<span>photography</span>
+										<span>drawing</span>
 									</div>
 									<div class="portfolio-desc">
-										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+										<p>This was my first attempt to draw Frozen character: Little Elsa! She's my favourite character in Frozen.</p>
 									</div>
 									
 									<div class="visible-xs">
 										<div class="row">
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="images/drawing-01.jpg" data-title="Elsa of Arendelle" data-lightbox="drawing-mobile">
 													<div class="stitch">
 														<i class="fa fa-search"></i>
 													</div>
 												</a>
 											</div>
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="http://hepapatitis.deviantart.com/art/Elsa-of-Arendelle-from-Disney-Frozen-428586046" target="_blank">
 													<div class="stitch">
 														<i class="fa fa-link"></i>
 													</div>
@@ -223,10 +224,10 @@
 									<div class="preview">
 										<div class="preview-hover hidden-xs">
 											<div class="preview-context">
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="images/dummy-03.jpg" data-title="My Second Photo" data-lightbox="photography">
 													<i class="fa fa-search"></i>
 												</a>
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="http://hepapatitis.deviantart.com/art/Elsa-of-Arendelle-from-Disney-Frozen-428586046" target="_blank">
 													<i class="fa fa-link"></i>
 												</a>
 											</div>
@@ -234,26 +235,26 @@
 										<img src="images/dummy-03.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
-										<h3>My First Photo</h3>
+										<h3>My Second Photo</h3>
 									</div>
 									<div class="portfolio-tags">
 										<span>photography</span>
 									</div>
 									<div class="portfolio-desc">
-										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+										<p>This was taken with my second digital camera given by my dad on 2009.</p>
 									</div>
 									
 									<div class="visible-xs">
 										<div class="row">
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="images/dummy-03.jpg" data-title="My Second Photo" data-lightbox="photography-mobile">
 													<div class="stitch">
 														<i class="fa fa-search"></i>
 													</div>
 												</a>
 											</div>
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" >
 													<div class="stitch">
 														<i class="fa fa-link"></i>
 													</div>
@@ -263,42 +264,43 @@
 									</div>
 								</div>
 							</div>
+							
 							<div class="col-sm-6 col-md-4 mix drawing" data-myorder="8">
 								<div class="portfolio">
 									<div class="preview">
 										<div class="preview-hover hidden-xs">
 											<div class="preview-context">
-												<a class="learnmore" href="#">
+												<a class="learnmore" href="images/drawing-02.jpg" data-title="My Own Personal Flurry" data-lightbox="drawing">
 													<i class="fa fa-search"></i>
 												</a>
-												<a class="learnmore" href="#">
+												<a class="learnmore"  href="http://hepapatitis.deviantart.com/art/Olaf-from-Disney-Frozen-430550592" target="_blank">
 													<i class="fa fa-link"></i>
 												</a>
 											</div>
 										</div>
-										<img src="images/dummy-01.jpg" class="img-responsive" alt="" />
+										<img src="images/drawing-02.jpg" class="img-responsive" alt="" />
 									</div>
 									<div class="portfolio-title">
-										<h3>My First Photo</h3>
+										<h3>My Own Personal Flurry</h3>
 									</div>
 									<div class="portfolio-tags">
-										<span>photography</span>
+										<span>drawing</span>
 									</div>
 									<div class="portfolio-desc">
-										<p>This was taken with my first digital camera given by my dad on 2009.</p>
+										<p>This is the scene when Olaf got his personal flurry to withstand summer heat.</p>
 									</div>
 									
 									<div class="visible-xs">
 										<div class="row">
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="images/drawing-02.jpg" data-title="My Own Personal Flurry" data-lightbox="drawing-mobile">
 													<div class="stitch">
 														<i class="fa fa-search"></i>
 													</div>
 												</a>
 											</div>
 											<div class="col-xs-6">
-												<a class="btn btn-main btn-block" href="#">
+												<a class="btn btn-main btn-block" href="http://hepapatitis.deviantart.com/art/Olaf-from-Disney-Frozen-430550592" target="_blank">
 													<div class="stitch">
 														<i class="fa fa-link"></i>
 													</div>
@@ -375,6 +377,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="plugins/jquery-scrollto.js"></script>
         <script src="plugins/mixitup/jquery.mixitup.min.js"></script>
+		<script src="plugins/lightbox/js/lightbox.min.js"></script>
 
         <script>
 			/*

@@ -6,9 +6,9 @@ $("a").click(function() {
 		var destination = $(elementClicked).offset().top;
 		
 		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1000 );
+		
+		return false;
 	}
-	
-	return false;
 });
 
 function resize_section()
@@ -50,12 +50,31 @@ function refresh_nav()
 	}
 }
 
+function refresh_portfolio()
+{
+	var max_height = 0, tmp_height;
+	$(".portfolio-desc").each(function (i, obj) {
+		tmp_height = $(this).height();
+		console.log(tmp_height);
+		if(max_height <= tmp_height)
+			max_height = tmp_height;
+	});
+	
+	$(".portfolio-desc").css('min-height', max_height);
+}
+
 $(function() {
 	resize_section();
 	refresh_nav();
 	
+	
 	$(window).resize(function() {
 		resize_section();
 		refresh_nav();
+		refresh_portfolio();
 	});
+});
+
+$(window).load(function(){
+	refresh_portfolio();
 });
