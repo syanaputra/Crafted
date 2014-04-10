@@ -10,6 +10,9 @@
 // Import Colours
 @import "buttons.less";
 
+// Import Mobile Adjustment
+@import "mobile.less";
+
 // Let's Start
 html, body {
 	font-family:@body-font;
@@ -52,6 +55,7 @@ html, body {
 	width:100%;
 	.transition();
 	bottom:-8px;
+	z-index:50;
 	
 	.nav-container {
 		display:inline-block;
@@ -148,7 +152,7 @@ strong { .header-shadow(); }
 p { margin:30px 0; }
 
 a { color:darken(@background-color,20%); .transition(); }
-a:hover { color:lighten(@background-color,20%);  }
+a:hover { color:lighten(@background-color,20%); }
 
 // Layout
 .paper {
@@ -190,7 +194,7 @@ a:hover { color:lighten(@background-color,20%);  }
 	position:absolute;
 	top:50%;
 	width:100%;
-	padding:50px 0;
+	padding:50px 8px;
 	margin-top:-190px;
 	
 	.hero-title {
@@ -297,21 +301,23 @@ a:hover { color:lighten(@background-color,20%);  }
 		text-align:center;
 		font-size:24px;
 	}
+	
+	&:hover {
+		.service-art {
+			color:@background-color;
+			background:#fff;
+		}
+	}
 }
 .service-container {
 	padding-top:40px;
 	
 	&:hover {
 		.service {
-			opacity:0.4;
+			opacity:0.6;
 			
 			&:hover {
 				opacity:1;
-				
-				.service-art {
-					color:@background-color;
-					background:#fff;
-				}
 			}
 		}
 	}
@@ -357,6 +363,34 @@ textarea.contact-form {
 	font-size:28px;
 	height:40px;
 	padding:6px 12px 0;
+	.box-shadow(0 0 0 transparent);
+}
+
+// :Focus
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
+select option:focus,
+input:focus,
+.form-control:focus,
+.uneditable-input:focus {   
+	border-color: rgba(199, 165, 126, 0.8);
+	.box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.1));
+	.box-shadow(0 0 8px rgba(199, 165, 126, 0.6));
+	outline: 0 none;
 }
 
 // Portfolio
@@ -367,7 +401,6 @@ textarea.contact-form {
 .portfolio-container:hover {
 	.portfolio {
 		opacity:0.7;
-		.rotation(0deg);
 		
 		&:hover {
 			opacity:1;
@@ -458,10 +491,10 @@ textarea.contact-form {
 		display:inline-block;
 		background:darken(@background-color,15%);
 		padding:10px 20px 5px;
-		margin:0 5px;
+		margin:5px 3px;
 		font-size:24px;
 		border:3px solid transparent;
-		.rounded(50px);
+		.rounded(8px);
 		
 		&.active {
 			background:darken(@background-color,20%);
@@ -472,22 +505,6 @@ textarea.contact-form {
 			border:3px #fff solid;
 			cursor:pointer;
 		}
-	}
-}
-
-@media (max-width: 767px) {
-	.portfolio {
-		.rotation(0deg);
-	}
-}
-@media (max-width: 767px) {
-	.portfolio {
-		.rotation(0deg);
-	}
-}
-@media (min-width: 768px) {
-	.portfolio {
-		.rotation(1.5deg);
 	}
 }
 

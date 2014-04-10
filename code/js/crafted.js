@@ -55,7 +55,7 @@ function refresh_portfolio()
 	var max_height = 0, tmp_height;
 	$(".portfolio-desc").each(function (i, obj) {
 		tmp_height = $(this).height();
-		console.log(tmp_height);
+		
 		if(max_height <= tmp_height)
 			max_height = tmp_height;
 	});
